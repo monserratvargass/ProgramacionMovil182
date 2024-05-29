@@ -76,14 +76,14 @@ nombres.forEach(function(nombre){
 
 //Declarar un nuevo arreglo
 
-const array2 = nombres.map(function(nombre){
+/* const array2 = nombres.map(function(nombre){
     console.log(nombre)
 
     return nombre
 })
 
 console.log(nombres)
-console.log(array2)
+console.log(array2) */
 
 //Funcion FIND: ubicar elementos en un arreglo de forma rapida (busquedas o filtrados)
 
@@ -93,7 +93,7 @@ console.log(array2)
     }
 })
 
-console.log(resultado) */
+console.log(resultado)  */
 
 //Funcion FILTER: recorre el arreglo filtrando un resultado en otro
 
@@ -125,3 +125,56 @@ console.log([...nombres,...edades]) */
 
 console.log(calc.suma(45,54))
 console.log(calc.resta(45,5)) */
+
+//Estrucutra de una PROMESA
+
+/* const ul=document.createElement('ul')
+
+fetch('https://jsonplaceholder.typicode.com/posts').then(function(response){ //Pasar el parametro que vamos a returnar
+    console.log("Carga de datos completado")
+
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        //Iteracion de datos
+        data.forEach(function(post){
+            const li = document.createElement('li')
+            li.innerHTML = post.title
+            ul.append(li)
+        })
+        document.body.append(ul)
+})
+
+console.log('Cargando HTML')
+console.log('Cargando CSS')
+console.log('Cargando Imagenes') */
+
+//ASYNC AWAIT
+
+const ul=document.createElement('ul')
+
+//Palabra reservada async para declarar la funcion
+async function cargarDatos(){
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts') //Una promesa con await
+    const datos = await response.json() //Promesa pero a la respuesta
+
+    console.log(datos)
+
+    //Procesamiento de datos en HTML
+    datos.forEach(function(post){
+        const li = document.createElement('li')
+        li.innerHTML = post.title
+        ul.append(li)
+    })
+
+    document.body.append(ul)
+}
+
+cargarDatos()
+
+console.log('Cargando HTML')
+console.log('Cargando CSS')
+console.log('Cargando Imagenes') 
+
+
