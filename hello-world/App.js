@@ -1,6 +1,6 @@
 //Importaciones
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, ScrollView, Dimensions } from 'react-native';
 import React,{useState} from 'react'; //Importacion para hacer usos de estado de los componentes
 
 
@@ -16,11 +16,68 @@ export default function App() {
 
     <View style={styles.container}>
 
+      <ScrollView style={styles.scrollView}>
+
       <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+      <Text> Componente TextInput:{submit} </Text>
+
       <TextInput style={styles.input} placeholder='Ingresa tu nombre' onChangeText={(t)=>setText(t)} value={text}/>
 
       <Button title='Presioname' onPress={()=>{ setSubmit(text); alert('Texto enviado') } }/> {/* Funcion anonima */}
       
+      </ScrollView>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -43,6 +100,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     padding: 10,
     borderBottomColor: 'blue',
+  },
+
+  scrollView: {
+    width: Dimensions.get('window').width
   },
 
 });
