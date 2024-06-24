@@ -1,84 +1,43 @@
 //Importaciones
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, TextInput, ScrollView, Dimensions } from 'react-native';
+import { Button, StyleSheet, Text, View, FlatList} from 'react-native';
 import React,{useState} from 'react'; //Importacion para hacer usos de estado de los componentes
 
 
 //Existen componentes, area donde se va a ejecutar
 export default function App() {
 
-  const[text, setText]=useState('Valor default')
-
-  const[submit, setSubmit]=useState('')
-
-
   return (
 
     <View style={styles.container}>
 
-      <ScrollView style={styles.scrollView}>
-
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-      <Text> Componente TextInput:{submit} </Text>
-
-      <TextInput style={styles.input} placeholder='Ingresa tu nombre' onChangeText={(t)=>setText(t)} value={text}/>
-
-      <Button title='Presioname' onPress={()=>{ setSubmit(text); alert('Texto enviado') } }/> {/* Funcion anonima */}
-      
-      </ScrollView>
+      <FlatList data={[{key:1,name:'Ivan Isay'},
+        {key:2,name:'Maya'},
+        {key:3,name:'Lili'},
+        {key:4,name:'Monse'},
+        {key:5,name:'Alan'},
+        {key:6,name:'Diego'},
+        {key:7,name:'Isabel'},
+        {key:8,name:'Isabel'},
+        {key:9,name:'Isabel'},
+        {key:10,name:'Isabel'},
+        {key:11,name:'Isabel'},
+        {key:12,name:'Isabel'},
+        {key:13,name:'Isabel'},
+        {key:14,name:'Isabel'},
+        {key:15,name:'Isabel'},
+        {key:16,name:'Isabel'},
+        {key:17,name:'Isabel'},
+        {key:18,name:'Isabel'},
+        {key:19,name:'Isabel'},
+        {key:20,name:'Isabel'},
+        {key:21,name:'Isabel'},
+      ]}
+      renderItem={({item})=><Text style={styles.item}>{item.name}</Text>}
+      />
 
       <StatusBar style="auto" />
+
     </View>
   );
 }
@@ -89,21 +48,17 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection:'column-reverse',
     backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems: 'strecht',
     justifyContent: 'center',
+    paddingTop: 60,
   },
 
-  input: {
-    width: '80%',
-    height: 40,
-    margin: 12,
-    borderBottomWidth: 1,
+  item: {
     padding: 10,
-    borderBottomColor: 'blue',
-  },
-
-  scrollView: {
-    width: Dimensions.get('window').width
+    fontSize: 24,
+    height: 50,
+    borderColor: 'blue',
+    borderBottomWidth: 1
   },
 
 });
